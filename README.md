@@ -17,12 +17,6 @@ You will need to install
 - [ ] Magenetometer
 - [ ] Barometer
 
-
-Use **manual linking** instead  `react-native link` 
-
-
 ### Important Note
 
 Use **manual linking** instead  `react-native link` 
-
-
