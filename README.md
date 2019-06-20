@@ -13,9 +13,9 @@ You will need to install
 ### Added Sensors 
 
 - [x] Gyroscope 
-- [ ] Accelerometer
-- [ ] Magenetometer
-- [ ] Barometer
+- [x] Accelerometer
+- [x] Magenetometer
+- [x] Barometer
 
 ### Important Note
 
