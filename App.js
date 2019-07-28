@@ -30,12 +30,15 @@ export default class App extends Component {
 
   componentDidMount() {
     setUpdateIntervalForType(SensorTypes.accelerometer, 500);
+    setUpdateIntervalForType(SensorTypes.gyroscope, 500);
+    setUpdateIntervalForType(SensorTypes.magnetometer, 500);
+    setUpdateIntervalForType(SensorTypes.barometer, 500);
 
     const subscription = gyroscope.subscribe(({ x, y, z }) => {
       gx = x.toFixed(2);
       gy = y.toFixed(2);
       gz = z.toFixed(2);
-      this.setState({ x, y, z });
+      this.setState({ gx, gy, gz });
     });
 
     const subscription2 = accelerometer.subscribe(({ x, y, z }) => {
@@ -64,10 +67,15 @@ export default class App extends Component {
       subscription3,
       subscription4
     });
+
+    alert("LAAN");
   }
 
   componentWillUnmount() {
     this.state.subscription.unsubscribe();
+    this.state.subscription2.unsubscribe();
+    this.state.subscription3.unsubscribe();
+    this.state.subscription4.unsubscribe();
   }
 
   render() {
